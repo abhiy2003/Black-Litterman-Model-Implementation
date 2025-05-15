@@ -143,7 +143,6 @@ for current_date in loop_dates:
     delta = market_implied_risk_aversion(market_prices, frequency=252, risk_free_rate=risk_free_rate)
 
     # Calculate market equilibrium returns (prior) based on market cap weights
-    #market_caps = prior_data.groupby('Ticker')['Mcap (Billions)'].mean()
     market_caps = data.loc[data['date'] == current_date, ['Ticker', 'Mcap (Billions)']].set_index('Ticker')['Mcap (Billions)']
     #print(market_caps)
     prior_returns = market_implied_prior_returns(market_caps, delta, cov_matrix, risk_free_rate=risk_free_rate)
