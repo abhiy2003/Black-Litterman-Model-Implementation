@@ -19,27 +19,8 @@ rates_df['Date'] = pd.to_datetime(rates_df['Date'])
 # Set the 'Dates' column as the index for easy lookup
 rates_df.set_index('Date', inplace=True)
 
-# Initialize investor views and confidences (test data)
-'''viewdict = {
-    "XLB": 0.10,
-    "XLC": 0.21,
-    "XLE": 0.15,
-    "XLF": 0.05,
-    "XLI": 0.08,
-    "XLK": 0.30,
-    "XLP": 0.04,
-    "XLRE": 0.11,
-    "XLU": 0.12,
-    "XLV": 0.07,
-    "XLY": 0.13
-}
-
-confidences = [0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]'''
-
 viewdict = {}
-
 confidences = []
-
 posterior_days = 900
 
 # Load the Excel file
