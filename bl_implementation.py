@@ -10,10 +10,10 @@ from pypfopt import EfficientFrontier, objective_functions, CLA
 from pypfopt.exceptions import OptimizationError
 
 # Load the historical risk-free rates from the CSV file
-rates_file_path = 'T-Bill Historical Rates.xlsx'  # Replace with your actual file path
+rates_file_path = 'T-Bill Historical Rates.xlsx'
 rates_df = pd.read_excel(rates_file_path)
 
-# Convert the 'Date' column to datetime, assuming it's in a non-standard format
+# Convert the 'Date' column to datetime if in a non-standard format
 rates_df['Date'] = pd.to_datetime(rates_df['Date'])
 
 # Set the 'Dates' column as the index for easy lookup
@@ -115,7 +115,7 @@ for current_date in loop_dates:
         risk_free_rate = (rates_df.loc[current_date, 'Rate']) / 100
     else:
         # Handle the case where current_date is missing
-        # For example, you can use the risk-free rate from the previous available date
+        # Use risk-free rate from the previous available date
         risk_free_rate = (rates_df.loc[:current_date, 'Rate'].iloc[-1]) / 100
 
     #print(risk_free_rate)
