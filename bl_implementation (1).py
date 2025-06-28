@@ -332,7 +332,7 @@ from matplotlib.ticker import FuncFormatter
 # Custom formatter for 2 decimal places in %
 percent_fmt_2dp = FuncFormatter(lambda y, _: f'{y:.2%}')
 
-# ---------- Monthly Average Optimal Portfolio Allocation % - Monthly Average Plot ----------
+# ---------- Optimal Portfolio Allocation % - Monthly Average Plot ----------
 
 # Resample to monthly average
 monthly_avg_weights = daily_weights.resample('ME').mean()
