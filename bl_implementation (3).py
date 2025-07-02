@@ -393,6 +393,7 @@ ax.set_ylabel('Allocation Mean (%)')
 ax.set_title('Mean Daily Black-Litterman Portfolio Allocation vs. Daily Market Weights by ETF')
 ax.set_xticks(x)
 ax.set_xticklabels(etfs)
+ax.set_xlabel('ETF')
 ax.legend()
 ax.yaxis.grid(True, linestyle='-', alpha=0.6)
 
