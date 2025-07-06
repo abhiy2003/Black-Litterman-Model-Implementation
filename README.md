@@ -1,3 +1,19 @@
 # Black-Litterman-Model-Implementation
 
-This is an implementation of the Black-Litterman portfolio allocation model and its application to optimizing asset allocation among 11 sector-level ETFs with given historical market (S&P 500) data and sentiment-driven investor views and confidences. The code prints out the daily allocation weights vs. the market weights and their respective means for each ETF, and also daily portfolio statistics such as its return vs. the market return, its Sharpe ratio, and its volatility. The output also includes final portfolio statistics including its total cumulative returns vs. the market's total cumulative returns and its Sharpe ratio, volatility, Beta, and Alpha over the test period of January 3rd, 2023 to June 28th, 2024. The portfolio statistics are saved to an Excel file. The monthly average of the daily optimal portfolio allocation percentage for each ETF is plotted as a stacked bar graph, the mean of the daily optimal portfolio allocation vs. the daily market weight percentage are plotted as a side-by-side bar graph, the standard deviation of daily allocation weights by ETF is plotted as a bar graph, and the portfolio's and market's respective cumulative returns over the test period are both plotted on a line graph for comparison.
+This is an implementation of the Black-Litterman portfolio allocation model and its application to optimizing asset allocation among 11 sector-level ETFs with given historical market (S&P 500) data and sentiment-driven investor views and confidences. The code prints out the daily allocation weights vs. the market weights and their respective means for each ETF, and also the following daily portfolio statistics:
+-Portfolio return
+-Market return
+-Sharpe ratio
+-Volatility
+The output also includes the following final portfolio statistics for our backtesting period (1/3/23 - 6/28/24): 
+-Portfolo's total cumulative returns
+-Market's total cumulative returns
+-Sharpe ratio
+-Volatility
+-Alpha
+-Beta
+These portfolio statistics are saved to an Excel file. The code also plots the following:
+-Monthly average of daily optimal portfolio allocation percentage for each ETF as stacked bar graph
+-Mean of daily optimal portfolio allocation vs. daily market weight percentage as side-by-side bar graph
+-Standard deviation of daily allocation weights by ETF as bar graph
+-Comparison of portfolio's and market's respective cumulative returns over the test period as a line graph
