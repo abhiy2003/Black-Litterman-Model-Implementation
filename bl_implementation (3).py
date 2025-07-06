@@ -157,9 +157,9 @@ for current_date in loop_dates:
     current_views = views_df[views_df['Date'] == current_date]
     viewdict = current_views.set_index('Sector')['Expected Posterior Return'].to_dict()
     confidences = current_views.set_index('Sector')['Confidence Level'].to_list()
-    for i in range(len(confidences)):
+    '''for i in range(len(confidences)):
       if confidences[i] > 1 or confidences[i] < 0:
-        confidences[i] = 0.9
+        confidences[i] = 0.9'''
 
     #print(confidences)
 
