@@ -5,6 +5,7 @@ This is an implementation of the Black-Litterman portfolio allocation model and 
 - Market return
 - Sharpe ratio
 - Volatility
+
 The output also includes the following final portfolio statistics for our backtesting period (1/3/23 - 6/28/24): 
 - Portfolo's total cumulative returns
 - Market's total cumulative returns
@@ -12,6 +13,7 @@ The output also includes the following final portfolio statistics for our backte
 - Volatility
 - Alpha
 - Beta
+
 These portfolio statistics are saved to an Excel file. The code also plots the following:
 - Monthly average of daily optimal portfolio allocation percentage for each ETF as stacked bar graph
 - Mean of daily optimal portfolio allocation vs. daily market weight percentage as side-by-side bar graph
