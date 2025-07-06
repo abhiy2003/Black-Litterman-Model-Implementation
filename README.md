@@ -15,7 +15,7 @@ The output also includes the following final portfolio statistics for our backte
 - Beta
 
 These portfolio statistics are saved to an Excel file. The code also plots the following:
-- Monthly average of daily optimal portfolio allocation percentage for each ETF as stacked bar graph
-- Mean of daily optimal portfolio allocation vs. daily market weight percentage as side-by-side bar graph
-- Standard deviation of daily allocation weights by ETF as bar graph
+- Monthly average of daily optimal portfolio allocation percentage for each ETF as a stacked bar graph
+- Mean of daily optimal portfolio allocation vs. daily market weight percentage as a side-by-side bar graph
+- Standard deviation of daily allocation weights by ETF as a bar graph
 - Comparison of portfolio's and market's respective cumulative returns over the test period as a line graph
