@@ -196,6 +196,7 @@ for current_date in loop_dates:
         #print(posterior_returns)
         ef = EfficientFrontier(posterior_returns, cov_matrix)
         ef.add_objective(objective_functions.L2_reg)
+        ef.add_constraint(lambda x: x >= pd.Series(min_weights))  # Apply the min weight constraint
         ef.min_volatility()  # If max_sharpe fails, do min_volatility
 
     bl_weights = ef.clean_weights()
