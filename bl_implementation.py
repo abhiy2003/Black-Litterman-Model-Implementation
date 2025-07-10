@@ -489,11 +489,11 @@ cumulative_returns = (1 + final_portfolio_stats_df[['Daily Portfolio Return', 'D
 
 # Plot
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(final_portfolio_stats_df['Date'], cumulative_returns['Daily Portfolio Return'], label='Portfolio Cumulative Return')
-ax.plot(final_portfolio_stats_df['Date'], cumulative_returns['Daily Market (S&P 500) Return'], label='S&P 500 Cumulative Return', color='crimson')
+ax.plot(final_portfolio_stats_df['Date'], cumulative_returns['Daily Portfolio Return'] - 1, label='Portfolio Cumulative Return')
+ax.plot(final_portfolio_stats_df['Date'], cumulative_returns['Daily Market (S&P 500) Return'] - 1, label='S&P 500 Cumulative Return', color='crimson')
 
-# Format y-axis to 2 decimal places
-ax.yaxis.set_major_formatter(FuncFormatter(lambda y, _: f'${y:.2f}'))
+# Format y-axis as %
+ax.yaxis.set_major_formatter(percent_fmt_2dp)
 
 # Use monthly ticks
 locator = mdates.MonthLocator()
